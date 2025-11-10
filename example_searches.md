@@ -20,6 +20,8 @@ E.g.
 - Eliminated letters: `grep -v [rastclnehpkb]
 - Known letters in correct places: `grep .i..o`
 - `o` not in position 2: `grep o | grep -v .o...`
+
+```bash
 cat words.txt | grep -v [rastclnehpkb] | grep .i..o | grep o | grep -v .o... | grep i | grep -v ..i.. | grep m | grep -v ..m..
 ```
 
