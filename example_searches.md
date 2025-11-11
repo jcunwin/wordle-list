@@ -25,3 +25,20 @@ E.g.
 cat words.txt | grep -v [rastclnehpkb] | grep .i..o | grep o | grep -v .o... | grep i | grep -v ..i.. | grep m | grep -v ..m..
 ```
 
+E.g. "roast" got nothing. "cline" showed "e" green and "c" yellow.
+
+```bash
+cat words | grep -v [roastlin] | grep d...e | grep c | grep -
+v c....
+```
+
+Returned:
+
+```
+pecke
+peece
+emcee
+educe
+deuce
+becke
+```
