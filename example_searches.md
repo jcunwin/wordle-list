@@ -28,8 +28,7 @@ cat words.txt | grep -v [rastclnehpkb] | grep .i..o | grep o | grep -v .o... | g
 E.g. "roast" got nothing. "cline" showed "e" green and "c" yellow.
 
 ```bash
-cat words | grep -v [roastlin] | grep d...e | grep c | grep -
-v c....
+cat words | grep -v [roastlin] | grep d...e | grep c | grep - v c....
 ```
 
 Returned:
@@ -41,4 +40,19 @@ emcee
 educe
 deuce
 becke
+```
+
+Tried:
+
+- SLATE - got L and E in wrong positions (no S, A or T)
+- LEMON - got L, E, O in wrong positions (no M or N)
+- HOLED - got H, O, E in correct positions, L wrong position, no D
+
+```
+cat words | grep -v [satmnd] | grep l | grep -v l.... | grep -v .l... | grep -v ..l.. | grep e | grep -v .e... | grep -v ....e | grep o | grep -v ...o. | grep ho.e.
+```
+
+Returned:
+```
+hovel
 ```
